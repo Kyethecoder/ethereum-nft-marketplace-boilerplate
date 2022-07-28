@@ -218,13 +218,17 @@ function NFTBalance() {
         onOk={() => list(nftToSend, price)}
         okText="List"
         footer={[
-          <Button onClick={() => setVisibility(false)}>
+          <Button key={"CancelBtn"} onClick={() => setVisibility(false)}>
             Cancel
           </Button>,
-          <Button onClick={() => approveAll(nftToSend)} type="primary">
+          <Button
+          key={"ApproveBtn"}
+          onClick={() => approveAll(nftToSend)} type="primary">
             Approve
           </Button>,
-          <Button onClick={() => list(nftToSend, price)} type="primary">
+          <Button
+          key={"ListBtn"}
+          onClick={() => list(nftToSend, price)} type="primary">
             List
           </Button>
         ]}
